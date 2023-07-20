@@ -11,16 +11,9 @@ import pythonImage from './img/python.png';
 
 function Cards() {
 
-    const randomImg = (array) => {
-    const newArray = [...array];
-    for (let i = newArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-    }
-    return newArray;
-  };
+    
   const [items, setItems] = useState(() => {
-    const initialItems = [
+    const itemImgs = [
       { id: 1, img: htmlImage, stat: '' },
       { id: 1, img: htmlImage, stat: '' },
       { id: 2, img: cssImage, stat: '' },
@@ -38,8 +31,8 @@ function Cards() {
       { id: 8, img: pythonImage, stat: '' },
       { id: 8, img: pythonImage, stat: '' },
     ];
-
-    return randomImg(initialItems);
+  
+    return itemImgs.sort(() => Math.random() - 0.5);
   });
 
   const [prev, setPrev] = useState(-1);

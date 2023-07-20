@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Card from './Card';
-import htmlImage from './img/html.png';
-import cssImage from './img/css.png';
-import jsImage from './img/js.png';
-import sassImage from './img/sass.png';
-import reactImage from './img/react.png';
-import figmaImage from './img/figma.png';
-import javaImage from './img/java.png';
-import pythonImage from './img/python.png';
+import htmlImage from '../img/html.png';
+import cssImage from '../img/css.png';
+import jsImage from '../img/js.png';
+import sassImage from '../img/sass.png';
+import reactImage from '../img/react.png';
+import figmaImage from '../img/figma.png';
+import javaImage from '../img/java.png';
+import pythonImage from '../img/python.png';
 
 function Cards() {
 
@@ -38,7 +38,6 @@ function Cards() {
   const [prev, setPrev] = useState(-1);
 
 
-
   const check = (current) => {
     if (items[current].id === items[prev].id) {
       const updatedItems = [...items];
@@ -62,7 +61,7 @@ function Cards() {
     }
   };
 
-  const handleClick = (id) => {
+  const functionClick = (id) => {
     if (prev === -1) {
       const updatedItems = [...items];
       updatedItems[id].stat = 'active';
@@ -76,7 +75,7 @@ function Cards() {
   return (
     <div className="container">
       {items.map((item, index) => (
-        <Card key={index} item={item} id={index} handleClick={handleClick} />
+        <Card key={index} item={item} id={index} handleClick={functionClick} />
       ))}
     </div>
   );

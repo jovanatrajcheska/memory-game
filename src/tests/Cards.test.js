@@ -33,11 +33,10 @@ describe('Cards Component', () => {
         fireEvent.click(cards[3]);
         expect(cards[3]).toHaveClass('active');
 
-
         // check if all other cards are not active
         for(let i = 0; i < cards.length; i++){
                 if(i != 3){
-                    expect(cards[i]).not.toHaveClass('active');
+                    expect(cards[i]).not.toHaveClass('active');    
                 }
         }
         

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Card({item, id, handleClick}){
 
     const itemClass = item.stat ? " active " + item.stat : ""

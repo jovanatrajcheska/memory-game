@@ -1,8 +1,6 @@
 import { render } from '@testing-library/react';
 import CardsProp from '../components/CardsProp';
 
-
-
 jest.mock('../img/html.png', () => 'htmlImage');
 jest.mock('../img/css.png', () => 'cssImage');
 jest.mock('../img/js.png', () => 'jsImage');

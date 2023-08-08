@@ -1,12 +1,22 @@
-function Card({item, id, handleClick}){
+import React from 'react';
 
-    const itemClass = item.stat ? " active " + item.stat : ""
+function Card({ item, id, handleClick, isChecking }) {
+  const itemClass = item.stat ? " active " + item.stat : "";
 
-    return (
-            <div className={"card" + itemClass} onClick={() => handleClick(id)}>
-                <img src={item.img} alt=""/>
-            </div>
-        )
+  const cardStyle = {
+    pointerEvents: isChecking ? 'none' : 'auto',
+  };
+
+  return (
+    <div
+      className={"card" + itemClass}
+      onClick={() => handleClick(id)}
+      data-testid={`card-${id}`}
+      style={cardStyle}
+    >
+      <img src={item.img} alt="" />
+    </div>
+  );
 }
 
-export default Card
+export default Card;

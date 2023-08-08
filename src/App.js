@@ -1,11 +1,9 @@
-
-import Cards from "./components/Cards";
+import CardsProp from "./components/CardsProp";
 function App() {
   return (
     <div className="App">
-     <h1> memory-game-react</h1>
-     <Cards />
-
+      <h1> memory-game-react</h1>
+      <CardsProp />
     </div>
   );
 }

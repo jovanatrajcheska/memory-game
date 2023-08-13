@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Card({ item, id, handleClick, isChecking }) {
-  const itemClass = item.stat ? " active " + item.stat : "";
+  const itemClass = item.stat ? `active ${item.stat}` : '';
 
   const cardStyle = {
     pointerEvents: isChecking ? 'none' : 'auto',
@@ -9,7 +9,7 @@ function Card({ item, id, handleClick, isChecking }) {
 
   return (
     <div
-      className={"card" + itemClass}
+      className={`card ${itemClass}`}
       onClick={() => handleClick(id)}
       data-testid={`card-${id}`}
       style={cardStyle}

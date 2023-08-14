@@ -15,5 +15,5 @@ describe("Rendering Game", () => {
       });
     });
   });
-  
+
 });

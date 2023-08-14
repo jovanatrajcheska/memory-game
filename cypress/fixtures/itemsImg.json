@@ -1,0 +1,19 @@
+[
+    { "id": 1, "img": "html.png", "stat": "", "pairClass": "pair-1" },
+    { "id": 2, "img": "html.png", "stat": "", "pairClass": "pair-1" },
+    { "id": 3, "img": "css.png", "stat": "", "pairClass": "pair-2" },
+    { "id": 4, "img": "css.png", "stat": "", "pairClass": "pair-2" },
+    { "id": 5, "img": "js.png", "stat": "", "pairClass": "pair-3" },
+    { "id": 6, "img": "js.png", "stat": "", "pairClass": "pair-3" },
+    { "id": 7, "img": "sass.png", "stat": "", "pairClass": "pair-4" },
+    { "id": 8, "img": "sass.png", "stat": "", "pairClass": "pair-4" },
+    { "id": 9, "img": "react.png", "stat": "", "pairClass": "pair-5" },
+    { "id": 10, "img": "react.png", "stat": "", "pairClass": "pair-5" },
+    { "id": 11, "img": "figma.png", "stat": "", "pairClass": "pair-6" },
+    { "id": 12, "img": "figma.png", "stat": "", "pairClass": "pair-6" },
+    { "id": 13, "img": "java.png", "stat": "", "pairClass": "pair-7" },
+    { "id": 14, "img": "java.png", "stat": "", "pairClass": "pair-7" },
+    { "id": 15, "img": "python.png", "stat": "", "pairClass": "pair-8" },
+    { "id": 16, "img": "python.png", "stat": "", "pairClass": "pair-8" }
+  ]
+  

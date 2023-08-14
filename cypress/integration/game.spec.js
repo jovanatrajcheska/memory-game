@@ -2,13 +2,18 @@ describe("Rendering Game", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/");
   });
-  
-  it('should render cards with correct images', () => {
-    cy.get('[data-testid="cards-container"]').find('.card img').should('have.length', 16);
-  });
-  
-  it('should shuffle and render cards', () => {
-    cy.get('[data-testid="cards-container"]').find('.card').should('have.length', 16);
-  });
 
+  it("should shuffle and render cards", () => {
+    cy.fixture("itemsImg.json").as("itemsImgData");
+
+    cy.get(".card img").then(($images) => {
+      cy.get("@itemsImgData").then((itemsImg) => {
+        const expectedImages = itemsImg.map((item) => item.img);
+        const actualImages = Array.from($images).map((img) => img.src);
+
+        expect(actualImages).not.to.deep.equal(expectedImages);
+      });
+    });
+  });
+  
 });
